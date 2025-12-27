@@ -1,6 +1,8 @@
 # TinyS3
 
-Upload images to S3-compatible storage with optional TinyPNG compression. Supports both clipboard images and Finder selection.
+A [Raycast](https://raycast.com) extension for uploading images to S3-compatible storage with optional TinyPNG compression.
+
+Supports both clipboard images and Finder selection.
 
 ## Features
 
