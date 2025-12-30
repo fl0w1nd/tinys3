@@ -11,7 +11,7 @@ import path from "node:path";
 import { v4 as uuidv4 } from "uuid";
 import { getContentType } from "./lib/clipboard";
 import { uploadToS3 } from "./lib/s3";
-import { buildPublicUrl, formatUrl, UrlFormat } from "./lib/format";
+import { buildPublicUrl, formatUrl } from "./lib/format";
 import { prettyBytes } from "./lib/bytes";
 
 const IMAGE_EXTENSIONS = ["png", "jpg", "jpeg", "gif", "webp", "svg", "bmp", "ico"];

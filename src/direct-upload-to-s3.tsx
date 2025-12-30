@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { readClipboardImageFile, getContentType } from "./lib/clipboard";
 import { uploadToS3 } from "./lib/s3";
-import { buildPublicUrl, formatUrl, UrlFormat } from "./lib/format";
+import { buildPublicUrl, formatUrl } from "./lib/format";
 import { prettyBytes } from "./lib/bytes";
 
 type State =

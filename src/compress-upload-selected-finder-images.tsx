@@ -12,7 +12,7 @@ import { v4 as uuidv4 } from "uuid";
 import { getContentType } from "./lib/clipboard";
 import { compressWithTinyPng } from "./lib/tinypng";
 import { uploadToS3 } from "./lib/s3";
-import { buildPublicUrl, formatUrl, UrlFormat } from "./lib/format";
+import { buildPublicUrl, formatUrl } from "./lib/format";
 import { prettyBytes, savingsPercent } from "./lib/bytes";
 
 const IMAGE_EXTENSIONS = ["png", "jpg", "jpeg", "gif", "webp", "svg", "bmp", "ico"];

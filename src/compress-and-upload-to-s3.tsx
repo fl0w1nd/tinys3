@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { readClipboardImageFile, getContentType } from "./lib/clipboard";
 import { compressWithTinyPng } from "./lib/tinypng";
 import { uploadToS3 } from "./lib/s3";
-import { buildPublicUrl, formatUrl, UrlFormat } from "./lib/format";
+import { buildPublicUrl, formatUrl } from "./lib/format";
 import { prettyBytes, savingsPercent } from "./lib/bytes";
 
 type State =
@@ -13,22 +13,22 @@ type State =
   | { status: "no-apikey" }
   | { status: "compressing"; filename: string; originalSize: number }
   | {
-    status: "uploading";
-    filename: string;
-    originalSize: number;
-    compressedSize: number;
-    compressionCount?: string | null;
-  }
+      status: "uploading";
+      filename: string;
+      originalSize: number;
+      compressedSize: number;
+      compressionCount?: string | null;
+    }
   | {
-    status: "success";
-    url: string;
-    formattedUrl: string;
-    filename: string;
-    originalSize: number;
-    compressedSize: number;
-    compressionCount?: string | null;
-    key: string;
-  }
+      status: "success";
+      url: string;
+      formattedUrl: string;
+      filename: string;
+      originalSize: number;
+      compressedSize: number;
+      compressionCount?: string | null;
+      key: string;
+    }
   | { status: "error"; message: string };
 
 export default function CompressAndUploadToS3() {
